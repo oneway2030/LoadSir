@@ -23,7 +23,7 @@ class Sample2Activity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sample1)
+        setContentView(R.layout.activity_sample2)
         btn1.setOnClickListener(this)
         btn2.setOnClickListener(this)
         btn3.setOnClickListener(this)
@@ -34,7 +34,7 @@ class Sample2Activity : AppCompatActivity(), View.OnClickListener {
         //保留全局设定,并添加一个自定义的loadSir,包含全局初始化中commit后的CallBack 和新添加的CallBack
         val cloneloadSir = LoadSir.getDefault()
             .cloneBuilder()
-            .addCallback(EmptyCallBack(R.string.fine_no_data, R.mipmap.status_empty, true))
+            .addCallback(EmptyCallBack(R.string.fine_no_data2, R.mipmap.status_empty, true))
             .addCallback(CustomCallBack())
             .build()
         //创建一个全新的CallBack,只包含新的CallBack

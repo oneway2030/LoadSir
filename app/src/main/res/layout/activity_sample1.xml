@@ -8,25 +8,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <Button
+                android:text="默认正在加载页面"
                 android:id="@+id/btn1"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
         <Button
+                android:text="默认提示页面"
                 android:id="@+id/btn2"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
         <Button
+                android:text="默认空页面"
                 android:id="@+id/btn3"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
         <Button
+                android:text="原始页面"
                 android:id="@+id/btn4"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -34,18 +38,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+        <TextView
+                android:layout_centerInParent="true"
+                android:background="#0f0"
+                android:gravity="center"
+                android:text="原始页面"
+                android:layout_width="match_parent" android:layout_height="match_parent"/>
 
-        <com.scwang.smartrefresh.layout.SmartRefreshLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <TextView
-                    android:layout_centerInParent="true"
-                    android:background="#0f0"
-                    android:gravity="center"
-                    android:text="原始页面"
-                    android:layout_width="match_parent" android:layout_height="match_parent"/>
-
-        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
     </RelativeLayout>
 

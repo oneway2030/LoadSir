@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LoadSir</string>
+    <string name="fine_no_data2">自定义空页面,下拉可以刷新</string>
 </resources>

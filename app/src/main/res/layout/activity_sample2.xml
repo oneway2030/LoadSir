@@ -3,5 +3,50 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:text="自定义界面"
+                android:id="@+id/btn1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        <Button
+                android:text="自定义空页面"
+                android:id="@+id/btn2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        <Button
+                android:text="默认空页面"
+                android:id="@+id/btn3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        <Button
+                android:text="原始页面"
+                android:id="@+id/btn4"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:layout_centerInParent="true"
+                android:background="#0f0"
+                android:gravity="center"
+                android:text="原始页面"
+                android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
 
 </LinearLayout>

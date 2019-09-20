@@ -12,13 +12,13 @@
             android:id="@+id/btn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="复用全局显示"
+            android:text="复用全局设置使用"
     />
     <Button
             android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="新建显示"
+            android:text="重新配置设置使用"
     />
 
 </LinearLayout>
