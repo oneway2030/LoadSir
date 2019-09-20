@@ -7,9 +7,7 @@
 compile 'xxxxx'
 ```
 
-### 第一步：配置
-
-###### 全局配置方式
+### 全局配置方式
 全局配置方式，使用的是单例模式，即获取的配置都是一样的。可在Application中配置，添加状态页，设置默认状态页
 
 ```java
@@ -26,7 +24,7 @@ public class App extends Application {
     }
 }
 ```
-###### 使用(三种场景)
+###  使用方法 (三种场景)
 1.使用上面全局配置过的 LoadSir
 
 ```java
@@ -45,7 +43,7 @@ public class App extends Application {
             });
 ```
 
-2.创建一个全新的LoadSir(不适用全局配置)
+2.创建一个全新的LoadSir(不使用全局配置)
 
 ```java
 LoadSir loadSir = new LoadSir.Builder()
@@ -75,6 +73,27 @@ LoadSir loadSir = new LoadSir.getDefault()
             }
         });
 ```
+
+
+### 在Fragment 中使用
+由于Fragment添加到Activitiy方式多样，比较特别，所以在Fragment注册方式不同于上面两种，大家先看模板代码：
+```java
+public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle
+        savedInstanceState) {
+    //第一步：获取布局View
+    rootView = View.inflate(getActivity(), R.layout.fragment_a_content, null);
+    //第二步：注册布局View
+    LoadService loadService = LoadSir.getDefault().register(rootView, new Callback.OnReloadListener() {
+        @Override
+        public void onReload(View v) {
+            // 重新加载逻辑
+        }
+    });
+    //第三步：返回LoadSir生成的LoadLayout
+    return loadService.getLoadLayout();
+}
+```java
+
 ## 代码混淆
 
 ```xml
