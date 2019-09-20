@@ -3,10 +3,14 @@
 
 ### 添加依赖
 
-```groovy
-compile 'xxxxx'
-```
+```gradle
 
+maven { url 'https://jitpack.io' }
+
+dependencies {
+   implementation 'com.github.oneway2030:LoadSir:V1.0.0'
+}
+```
 ### 全局配置方式
 在Application中配置全局的 LoadSir.getDefault() 的状态页面
 
@@ -93,6 +97,12 @@ public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
     return loadService.getLoadLayout();
 }
 ```
+
+### 自定义CallBack
+
+[参考 CustomCallBack](https://github.com/oneway2030/LoadSir/blob/master/app/src/main/java/com/oneway/sample/callback/CustomCallBack.java)
+[参考 EmptyCallBack](https://github.com/oneway2030/LoadSir/blob/master/app/src/main/java/com/oneway/sample/callback/EmptyCallBack.java)
+
 
 ### 代码混淆
 ```xml
