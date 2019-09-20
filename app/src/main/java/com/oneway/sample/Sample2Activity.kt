@@ -34,12 +34,12 @@ class Sample2Activity : AppCompatActivity(), View.OnClickListener {
         //保留全局设定,并添加一个自定义的loadSir,包含全局初始化中commit后的CallBack 和新添加的CallBack
         val cloneloadSir = LoadSir.getDefault()
             .cloneBuilder()
+            .addCallback(EmptyCallBack(R.string.fine_no_data, R.mipmap.status_empty, true))
             .addCallback(CustomCallBack())
             .build()
         //创建一个全新的CallBack,只包含新的CallBack
         val newLoadSir = LoadSir.Builder()
             .addCallback(CustomCallBack())
-            .addCallback(EmptyCallBack())
             .build()
         mLoadService = cloneloadSir.register(content, object : Callback.OnReloadListener {
             override fun onReload(v: View?) {
@@ -47,7 +47,7 @@ class Sample2Activity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this@Sample2Activity, "重新加载逻辑...", Toast.LENGTH_SHORT).show()
             }
         })
-            .setCallBack(CustomCallBack::class.java, object :Transport{
+            .setCallBack(CustomCallBack::class.java, object : Transport {
                 override fun order(context: Context, view: View) {
                     val tv = view.findViewById<TextView>(R.id.tv)
                     tv.setText("动态修改Callback的内容")

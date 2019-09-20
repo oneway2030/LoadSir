@@ -32,7 +32,22 @@
     <RelativeLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:layout_centerInParent="true"
+                    android:background="#0f0"
+                    android:gravity="center"
+                    android:text="原始页面"
+                    android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </RelativeLayout>
 
 
 </LinearLayout>

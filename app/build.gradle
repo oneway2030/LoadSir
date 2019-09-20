@@ -33,6 +33,7 @@ dependencies {
     implementation lib.junit
     implementation lib.constraintlayout
     implementation lib.v7
+    implementation lib.recyclerview
     implementation project(":loaisir")
     implementation lib.SmartRefreshLayout   //下拉刷新
     implementation lib.SmartRefreshLayout_Head   //下拉刷新 头部
