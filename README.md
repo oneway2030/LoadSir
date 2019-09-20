@@ -92,14 +92,16 @@ public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
     //第三步：返回LoadSir生成的LoadLayout
     return loadService.getLoadLayout();
 }
-```java
+```
 
-## 代码混淆
-
+### 代码混淆
 ```xml
 -dontwarn com.kingja.loadsir.**
 -keep class com.kingja.loadsir.** {*;}
 ```
+
+## 说明
+改项目是在LoadSir项目上做了一些自己的修改  [点击跳转原项目](https://github.com/KingJA/LoadSir)
 
 
 
