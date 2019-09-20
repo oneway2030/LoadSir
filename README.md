@@ -30,7 +30,7 @@ public class App extends Application {
 ```
 ###  使用方法 (三种场景)
 1.使用上面全局配置过的 LoadSir
-
+[参考 Sample1Activity](https://github.com/oneway2030/LoadSir/blob/master/app/src/main/java/com/oneway/sample/Sample1Activity.kt)
 ```java
    LoadService loadService = LoadSir.getDefault().register(this, new Callback.OnReloadListener() {
         @Override
@@ -48,7 +48,7 @@ public class App extends Application {
 ```
 
 2.创建一个全新的LoadSir(不使用全局配置)
-
+[参考 Sample2Activity](https://github.com/oneway2030/LoadSir/blob/master/app/src/main/java/com/oneway/sample/Sample2Activity.kt)
 ```java
 LoadSir loadSir = new LoadSir.Builder()
                 .addCallback(new LoadingCallback())
@@ -64,7 +64,7 @@ LoadSir loadSir = new LoadSir.Builder()
 ```
 
 3.如果你即想保留全局配置，又想在某个特殊页面加点不同的配置(如:在某个页面需要单独配置一个状态页面 CustomCallBack)
-
+[参考 Sample2Activity](https://github.com/oneway2030/LoadSir/blob/master/app/src/main/java/com/oneway/sample/Sample2Activity.kt)
 ```java
 LoadSir loadSir = new LoadSir.getDefault()
                 .cloneBuilder()  //克隆一个全局配置的副本
@@ -79,7 +79,7 @@ LoadSir loadSir = new LoadSir.getDefault()
 ```
 
 
-### 在Fragment 中使用
+### 在Fragment 中使用 
 由于Fragment添加到Activitiy方式多样，比较特别，所以在Fragment注册方式不同于上面两种，大家先看模板代码：
 ```java
 public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle
