@@ -8,7 +8,7 @@ compile 'xxxxx'
 ```
 
 ### 全局配置方式
-全局配置方式，使用的是单例模式，即获取的配置都是一样的。可在Application中配置，添加状态页，设置默认状态页
+在Application中配置全局的 LoadSir.getDefault() 的状态页面
 
 ```java
 public class App extends Application {
@@ -19,7 +19,7 @@ public class App extends Application {
                 .addCallback(new DefEmptyCallBack())//添加各种状态页
                 .addCallback(new DefHintCallback())  
                 .addCallback(new DefLoadingCallback())
-                .setDefaultCallback(LoadingCallback.class)//设置默认状态页
+                .setDefaultCallback(SuccessCallback.class)//设置默认状态页为成功页面
                 .commit();
     }
 }
@@ -59,7 +59,7 @@ LoadSir loadSir = new LoadSir.Builder()
         });
 ```
 
-3.如果你即想保留全局配置，又想在某个特殊页面加点不同的配置 
+3.如果你即想保留全局配置，又想在某个特殊页面加点不同的配置(如:在某个页面需要单独配置一个状态页面 CustomCallBack)
 
 ```java
 LoadSir loadSir = new LoadSir.getDefault()
@@ -101,7 +101,7 @@ public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
 ```
 
 ## 说明
-改项目是在LoadSir项目上做了一些自己的修改  [点击跳转原项目](https://github.com/KingJA/LoadSir)
+改项目只是在LoadSir项目上做了一些自己的修改以满足自己的业务需求  [点击跳转原项目](https://github.com/KingJA/LoadSir)
 
 
 
